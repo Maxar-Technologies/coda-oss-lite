@@ -3,7 +3,7 @@ from build import CPPOptionsContext, enableWafUnitTests
 from waflib import Scripting, Options, Context
 
 VERSION = '3.0-dev'
-APPNAME = 'CODA-OSS'
+APPNAME = 'CODA-OSS-LITE'
 Context.APPNAME = APPNAME
 top  = '.'
 out  = 'target'
