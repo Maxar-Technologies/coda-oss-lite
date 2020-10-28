@@ -24,15 +24,11 @@ class CodaOssConan(ConanFile):
         }
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False],
-               "BOOST_HOME": "ANY",
-               "ENABLE_BOOST": [True, False],
                "MT_DEFAULT_PINNING": [True, False],
                "CODA_BUILD_TESTS": [True, False],
                "CODA_INSTALL_TESTS": [True, False],
                }
     default_options = {"shared": False,
-                       "BOOST_HOME": "",
-                       "ENABLE_BOOST": False,
                        "MT_DEFAULT_PINNING": False,
                        "CODA_BUILD_TESTS": True,
                        "CODA_INSTALL_TESTS": False,
@@ -72,9 +68,6 @@ class CodaOssConan(ConanFile):
     def package_id(self):
         # Make any change in our dependencies' version require a new binary
         self.info.requires.full_version_mode()
-
-        if len(self.info.options.BOOST_HOME) > 0:
-            self.info.options.ENABLE_BOOST = True
 
         # make ABI independent of specific paths
         for name, val in self.info.options.as_list():
