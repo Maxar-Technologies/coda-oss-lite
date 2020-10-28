@@ -55,7 +55,6 @@ add_subdirectory("unique")
 add_subdirectory("math")
 add_subdirectory("mt")
 add_subdirectory("logging")
-add_subdirectory("net") # must be after "re"
 add_subdirectory("plugin")
 add_subdirectory("tiff")
 add_subdirectory("polygon")

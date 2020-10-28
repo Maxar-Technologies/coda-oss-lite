@@ -1,5 +1,4 @@
 add_subdirectory("boost")
-#add_subdirectory("curl") # this is handled in coda_find_system_dependencies
 #add_subdirectory("numpy") # this is handled in coda_find_system_dependencies
 
 set(ENABLE_J2K ON CACHE BOOL "enable J2K library")
