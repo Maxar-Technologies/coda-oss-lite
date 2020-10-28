@@ -18,12 +18,6 @@ if (ENABLE_JPEG OR JPEG_HOME)
     add_subdirectory("jpeg")
 endif()
 
-set(ENABLE_PCRE ON CACHE BOOL "enable PCRE library")
-set(PCRE_HOME "" CACHE PATH "path to PCRE installation")
-if (ENABLE_PCRE OR PCRE_HOME)
-    add_subdirectory("pcre")
-endif()
-
 set(SQL_LAYER "" CACHE STRING "SQL backend [mysql, psql, oracle]")
 set(SQL_HOME "" CACHE PATH "Path to SQL installation")
 if (SQL_LAYER OR SQL_HOME)
