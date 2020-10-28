@@ -18,9 +18,4 @@ if (ENABLE_JPEG OR JPEG_HOME)
     add_subdirectory("jpeg")
 endif()
 
-set(SQL_LAYER "" CACHE STRING "SQL backend [mysql, psql, oracle]")
-set(SQL_HOME "" CACHE PATH "Path to SQL installation")
-if (SQL_LAYER OR SQL_HOME)
-    add_subdirectory("sql")
-endif()
 
