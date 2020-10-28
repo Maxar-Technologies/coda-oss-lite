@@ -36,8 +36,3 @@ if (ENABLE_UUID OR UUID_HOME)
     add_subdirectory("uuid")
 endif()
 
-set(ENABLE_ZIP ON CACHE BOOL "enable zlib")
-set(ZIP_HOME "" CACHE PATH "path to pre-existing zlib installation, if not provided zlib will be built")
-if (ENABLE_ZIP OR ZIP_HOME)
-    add_subdirectory("zlib")
-endif()
