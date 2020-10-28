@@ -25,28 +25,14 @@ class CodaOssConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False],
                "BOOST_HOME": "ANY",
-               "PYTHON_HOME": "ANY",
-               "PYTHON_VERSION": "ANY",
                "ENABLE_BOOST": [True, False],
-               "ENABLE_PYTHON": [True, False],
-               "ENABLE_SWIG": [True, False],
-               "ENABLE_JARS": [True, False],
-               "CMAKE_DISABLE_FIND_PACKAGE_OpenSSL": [True, False],
-               "CMAKE_DISABLE_FIND_PACKAGE_CURL": [True, False],
                "MT_DEFAULT_PINNING": [True, False],
                "CODA_BUILD_TESTS": [True, False],
                "CODA_INSTALL_TESTS": [True, False],
                }
     default_options = {"shared": False,
                        "BOOST_HOME": "",
-                       "PYTHON_HOME": "",
-                       "PYTHON_VERSION": "",
                        "ENABLE_BOOST": False,
-                       "ENABLE_PYTHON": True,
-                       "ENABLE_SWIG": False,
-                       "ENABLE_JARS": True,
-                       "CMAKE_DISABLE_FIND_PACKAGE_OpenSSL": False,
-                       "CMAKE_DISABLE_FIND_PACKAGE_CURL": False,
                        "MT_DEFAULT_PINNING": False,
                        "CODA_BUILD_TESTS": True,
                        "CODA_INSTALL_TESTS": False,
@@ -89,8 +75,6 @@ class CodaOssConan(ConanFile):
 
         if len(self.info.options.BOOST_HOME) > 0:
             self.info.options.ENABLE_BOOST = True
-        if len(self.info.options.PYTHON_HOME) > 0:
-            self.info.options.ENABLE_PYTHON = True
 
         # make ABI independent of specific paths
         for name, val in self.info.options.as_list():

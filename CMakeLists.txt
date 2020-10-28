@@ -39,7 +39,3 @@ endif()
 
 add_subdirectory("modules")
 
-# generate package config, with the following paths exported
-set(JARS_DIR ${CODA_STD_PROJECT_LIB_DIR} CACHE INTERNAL
-    "path to installed jars, needed by downstream projects")
-coda_generate_package_config(JARS_DIR SWIG_INCLUDE_DIR)
