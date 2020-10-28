@@ -10,7 +10,7 @@ out  = 'target'
 
 DIRS = 'modules'
 
-TOOLS = 'build pythontool swig'
+TOOLS = 'build'
 
 def options(opt):
     opt.load(TOOLS, tooldir='./build/')
